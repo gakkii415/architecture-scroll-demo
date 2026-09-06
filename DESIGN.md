@@ -350,6 +350,20 @@ Yesの場合、装飾を追加する前に、構成、情報階層、コンテ�
 
 ## Project Direction
 
+### INWARD / short architectural scroll study
+
+- Product: a visual motion demo, not a marketing page. Primary task: swipe to travel through layered architectural imagery on a phone.
+- Reference: user-supplied Weblove/TikTok screenshot (no original site URL supplied). Observed: near-black architectural mass, bronze lighting, image-dominant composition, typography over imagery. Original moving site/DOM unavailable; do not claim those were verified.
+- Compared structures: vertically stacked image panels versus one pinned spatial scene. Choose one pinned scene: the short travel makes depth and occlusion visible without long copy or extra sections.
+- Macrostructure: one full-screen scene spanning 3.6 screen-heights total, quiet top label, bottom progress and a replay control only at the end.
+- Signature: three independently transformed image planes; front doorway passes out of frame first, inner portal next, revealing a courtyard. Typography sits between planes, so architecture occludes it.
+- Typography: restrained serif scene title, system sans labels; no external font dependency. Small labels at least 12px, active controls at least 14px.
+- Surface: near-black frame, warm white type, copper progress line. No cards, marketing CTA, shadows, or decorative controls.
+- Mobile: portrait-specific plane width; native page scrolling, no wheel/touch interception, stable small-viewport scene height, safe-area-aware controls.
+- Motion: transforms/opacity only; one rAF loop active while catching up with scrolling; reduced-motion mode uses opacity instead of travel; native scroll stays available.
+- Asset strategy: generated photographic courtyard plus two transparent architectural foregrounds, bundled locally.
+- Validation boundary: syntax/assets and deterministic progress-state checks; live browser QA not requested and therefore not performed.
+
 - Product / users / primary task:
 - Context of use / target devices:
 - Desired impression:
