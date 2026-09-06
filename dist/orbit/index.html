@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#03060c"><meta name="description" content="月をかすめ、地球の向こうへ。スクロールで進む短い3D宇宙体験。">
+  <title>ORBIT — Beyond the blue</title><link rel="icon" href="data:,">
+  <link rel="stylesheet" href="orbit.css?v=2"><script type="module" src="orbit.mjs?v=2"></script>
+</head>
+<body>
+  <main id="journey" aria-label="スクロールで月の横を通り地球を周回する3D体験">
+    <div id="stage">
+      <div class="word" id="word" aria-hidden="true">OUT<br>THERE.</div>
+      <canvas id="space" aria-label="立体的な地球と月。スクロールで視点が移動します。"></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+      <header><a class="brand" href="#journey">ORBIT<span>BEYOND THE BLUE</span></a><a class="previous" href="../">前の2.5D版 ↗</a></header>
+      <div class="chapter-copy" id="copy"><p id="eyebrow">01 — DEPARTURE</p><h1 id="title">青の、その先へ。</h1></div>
+      <footer>
+        <div class="bottom-row"><span id="hint">スクロールして出発 ↓</span><span class="version">WEBGL / v2</span><button id="replay" type="button" hidden>もう一度 ↺</button></div>
+        <div class="track" role="progressbar" aria-label="旅の進捗" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress"></span></div>
+        <div class="credit-row"><a href="credits.html">素材・クレジット</a><span>THREE.JS × GSAP</span></div>
+      </footer>
+      <div class="loading" id="loading" role="status"><span>軌道を準備しています</span><small id="loading-detail">地球と月を読み込み中</small></div>
+      <div class="failure" id="failure" role="alert" hidden><h2>3Dを読み込めませんでした</h2><p id="failure-message">通信を確認して、再読み込みしてください。</p><button type="button" id="reload">再読み込み</button><a href="../">軽い2.5D版を開く ↗</a></div>
+      <noscript><p class="failure">3Dの表示にはJavaScriptが必要です。<a href="../">前のデモへ</a></p></noscript>
+    </div>
+  </main>
+</body>
+</html>

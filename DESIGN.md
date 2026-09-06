@@ -350,6 +350,18 @@ Yesの場合、装飾を追加する前に、構成、情報階層、コンテ�
 
 ## Project Direction
 
+### ORBIT / real 3D companion, v2
+
+- Preserve INWARD unchanged; add `/orbit/` as a separate comparison route in the same repository created by repository-creator.
+- Task: swipe through a short Earth/Moon flyby, then round Earth's limb. True perspective geometry and depth occlusion, not scaling image planes.
+- Compare structures: a model turntable versus a travelling camera. Choose travelling camera: passing the near Moon while Earth stays distant shows parallax clearly before circling the planet.
+- Reference remains the supplied image-led scroll example, translated to space. No original live-site URL or browser QA available/requested; do not claim screenshot verification.
+- Visual thesis: cold black space, a brilliant blue Earth, a pale close Moon. Oversized editorial word behind the WebGL canvas; restrained mission-style labels above it. No content sections, cards, dashboard stats or invented science facts.
+- Scale and travel are intentionally cinematic, not astronomically accurate. Disclose this in credits.
+- Source: https://www.solarsystemscope.com/textures/ ; Earth day, clouds, night, Moon maps under CC BY 4.0. Bundle compressed derivatives and visible linked credits; no hotlinking.
+- Implementation: locally vendored Three.js 0.170.0 and GSAP 3.13.0 ScrollTrigger; 3.2 screen-heights of scroll travel; curved camera path, separate Earth/cloud rotation, true Moon occlusion; GPU pixel ratio capped at 1.5.
+- Reduced-motion: stationary camera overview, no automatic rotations. Stop rendering while document is hidden. Native scroll is not intercepted.
+
 ### INWARD / short architectural scroll study
 
 - Product: a visual motion demo, not a marketing page. Primary task: swipe to travel through layered architectural imagery on a phone.
