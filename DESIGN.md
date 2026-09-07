@@ -350,6 +350,17 @@ Yesの場合、装飾を追加する前に、構成、情報階層、コンテ�
 
 ## Project Direction
 
+### ORBIT / lightweight cinematic VFX, v3
+
+- Preserve the v2 camera points, scroll duration, four narrative phases, bundled source textures and mobile-first composition. This is a rendering-quality pass, not a new route or redesign.
+- Product/user/context: a short visual scroll experiment, primarily viewed by touch on iPhone. The Earth and Moon remain the only dominant objects; interface density stays deliberately low.
+- Compare structures: pre-rendered frame sequence versus enhanced real-time rendering. Choose real-time rendering so reverse scroll, geometric occlusion and the existing path remain exact; accept that this targets cinematic web imagery rather than offline film compositing.
+- Visual thesis: sunlit atmospheric edge against a near-black field, with practical optical imperfections only where they reinforce scale. Preserve the existing restrained mission typography and cold blue palette.
+- Signature: the terminator now combines cloud shadow, city emission, ocean glint and a layered atmosphere; a depth-tested solar halo, faint nebulae and close dust establish distance without competing with Earth.
+- Finishing: one lightweight full-screen shader supplies restrained color separation, scroll-velocity smear, highlight bloom impression, vignette and procedural grain. It is rendered only when the scroll/camera state changes.
+- Mobile safeguards: retain 1.5 maximum device-pixel ratio, keep stars/dust to single draw calls, avoid a multi-pass bloom composer, stop while hidden, and disable motion smear under reduced-motion.
+- Reference boundary remains the user-supplied image-led scroll example and the existing ORBIT art direction. No new browser-reference or visual QA was requested; do not claim live screenshot verification.
+
 ### ORBIT / real 3D companion, v2
 
 - Preserve INWARD unchanged; add `/orbit/` as a separate comparison route in the same repository created by repository-creator.

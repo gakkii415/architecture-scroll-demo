@@ -18,12 +18,12 @@ JavaScript syntax checked; deterministic progress checks cover 0%, 15%, 40%, 70%
 
 Created via `gakkii415/repository-creator`.
 
-## ORBIT — real 3D companion (v2)
+## ORBIT — real 3D companion (v3)
 
 Open `dist/orbit/` for a Three.js + GSAP ScrollTrigger journey. The existing INWARD route is unchanged.
 
 Locally bundled Solar System Scope Earth day/night/cloud and Moon textures (CC BY 4.0), with credits at `dist/orbit/credits.html`. Original sources: https://www.solarsystemscope.com/textures/ . Textures converted to WebP; cinematic scale, not a scientific simulation.
 
-The camera follows a curved 3D path past the Moon and around Earth. GLSL day/night lighting, a separate cloud shell and an atmospheric limb replace the previous flat image-plane technique. Text lies behind the alpha canvas so the actual geometry occludes it. Rendering is on demand; pixel ratio is capped at 1.5; reduced motion keeps the camera stationary.
+The camera follows the same curved 3D path past the Moon and around Earth. The v3 VFX pass adds cloud-cast surface shadow, ocean glint, stronger city-light emission, raised clouds and lunar relief, forward-lit atmospheric scattering, a depth-tested solar halo, faint nebulae, near-camera dust, and a restrained cinematic finishing shader with chromatic aberration, motion smear, highlight rolloff, vignette and film grain. Text remains behind the WebGL canvas so actual geometry occludes it. Rendering is on demand; pixel ratio is capped at 1.5; reduced motion keeps the camera stationary and disables motion smear.
 
 Validation: vendor/module syntax and import check; all local asset references checked; 1,001 camera-path samples confirm the camera remains outside Earth and Moon. Live browser and physical-device testing not performed.
